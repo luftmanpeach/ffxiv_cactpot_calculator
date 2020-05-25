@@ -15,7 +15,7 @@ function makeForm() {
   var row = table.insertRow(-1);
   for (var i = 3; i < 8; i++) {
     var el = row.insertCell(-1);
-    var s = '<input id=Expect' + i + ' readOnly="true"/>';
+    var s = '<div id=Expect' + i + ' >&nbsp;</div>';
     el.innerHTML = s;
   }
 
@@ -23,7 +23,7 @@ function makeForm() {
   for (var i = 0; i < 3; i++) {
     var row = table.insertRow(-1);
     var el = row.insertCell(-1);
-    var s = '<input id=Expect' + i + ' readOnly="true"/>';
+    var s = '<div id=Expect' + i + ' >&nbsp;</div>';
     el.innerHTML = s;
     for (var j = 0; j < 3; j++) {
       var el = row.insertCell(-1);
@@ -135,14 +135,14 @@ function calculate(a, b, c) {
 }
 
 function onUpdate() {
-  get("Expect0").value = calculate(get("Select00"), get("Select01"), get("Select02")); // row 1
-  get("Expect1").value = calculate(get("Select10"), get("Select11"), get("Select12")); // row 2
-  get("Expect2").value = calculate(get("Select20"), get("Select21"), get("Select22")); // row 3
-  get("Expect3").value = calculate(get("Select00"), get("Select11"), get("Select22")); // \
-  get("Expect4").value = calculate(get("Select00"), get("Select10"), get("Select20")); // col 1
-  get("Expect5").value = calculate(get("Select01"), get("Select11"), get("Select21")); // col 2
-  get("Expect6").value = calculate(get("Select02"), get("Select12"), get("Select22")); // col 3
-  get("Expect7").value = calculate(get("Select02"), get("Select11"), get("Select20")); // /
+  get("Expect0").innerHTML = calculate(get("Select00"), get("Select01"), get("Select02")); // row 1
+  get("Expect1").innerHTML = calculate(get("Select10"), get("Select11"), get("Select12")); // row 2
+  get("Expect2").innerHTML = calculate(get("Select20"), get("Select21"), get("Select22")); // row 3
+  get("Expect3").innerHTML = calculate(get("Select00"), get("Select11"), get("Select22")); // \
+  get("Expect4").innerHTML = calculate(get("Select00"), get("Select10"), get("Select20")); // col 1
+  get("Expect5").innerHTML = calculate(get("Select01"), get("Select11"), get("Select21")); // col 2
+  get("Expect6").innerHTML = calculate(get("Select02"), get("Select12"), get("Select22")); // col 3
+  get("Expect7").innerHTML = calculate(get("Select02"), get("Select11"), get("Select20")); // /
 }
 
 function onRefresh() {
