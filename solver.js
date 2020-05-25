@@ -37,7 +37,14 @@ function makeForm() {
   }
 
   // payout form
+	// multiple
   var table = get("payoutForm");
+	var multiple = table.insertRow(-1);
+	multiple.innerHTML = "<tr><th>multiple</th><td><input id=Payout888 value=1.0 /></td></tr>";
+
+	// normal payout
+	var header = table.insertRow(-1);
+	header.innerHTML = "<tr><th>num</th><th>reward</th><th>num</th><th>reward</th></tr>";
   for (var i = 6; i < 15; i++) {
     var row = table.insertRow(-1);
     var el = row.insertCell(-1);
