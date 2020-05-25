@@ -69,3 +69,24 @@ function onUpdate() {
   get("Expect6").value = sum(get("Select02"), get("Select12"), get("Select22"));  // col 3
   get("Expect7").value = sum(get("Select02"), get("Select11"), get("Select20"));  // /
 }
+
+function onRefresh() {
+  // expectations
+  for (var i=0; i<8; i++) {
+    var ex = get("Expect"+i);
+    ex.value = "";
+  }
+
+
+  // selections
+  for (var row = 0; row < 3; row++) {
+    for (var col = 0; col < 3; col++) {
+      var select = get("Select" + row + col);
+      select.value = 0;
+      for (var i = 1; i <= 9; i++) {
+        select.options[i].disabled = false;
+      }
+    }
+  }
+
+}
