@@ -1,17 +1,24 @@
 var options = "<option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>";
 var num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var payout = [
+	NaN, NaN, NaN, NaN, NaN, NaN,
+	10000, 36, 720, 360, 80, 252, 108, 72,
+	54, 180, 72, 180, 119, 36, 306, 1080, 144, 1800, 3600
+];
+
 
 function get(e) {
   return document.getElementById(e);
 }
 
 function makeForm() {
+  // scrach form
   var table = get("scratchForm");
 
   // header row
-  var head = table.insertRow(-1);
+  var row = table.insertRow(-1);
   for (var i = 3; i < 8; i++) {
-    var el = head.insertCell(-1);
+    var el = row.insertCell(-1);
     var s = '<input id=Expect' + i + ' readOnly="true"/>';
     el.innerHTML = s;
   }
@@ -29,6 +36,30 @@ function makeForm() {
     }
   }
 
+  // payout form
+  var table = get("payoutForm");
+  for (var i = 6; i < 15; i++) {
+    var row = table.insertRow(-1);
+    var el = row.insertCell(-1);
+    el.innerHTML = i;
+    var el = row.insertCell(-1);
+    var s = '<input id=Payout' + i + ' value=' + payout[i] + ' />';
+    el.innerHTML = s;
+    var j = i+10;
+    var el = row.insertCell(-1);
+    el.innerHTML = j;
+    var el = row.insertCell(-1);
+    var s = '<input id=Payout' + j + ' value=' + payout[j] + ' />';
+    el.innerHTML = s;
+  }
+  // payout form extra row
+  var i = 15;
+  var row = table.insertRow(-1);
+  var el = row.insertCell(-1);
+  el.innerHTML = i;
+  var el = row.insertCell(-1);
+  var s = '<input id=Payout' + i + ' value=' + payout[i] + ' />';
+  el.innerHTML = s;
 }
 
 
