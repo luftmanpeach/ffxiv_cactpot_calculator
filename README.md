@@ -1,5 +1,6 @@
-# ffxiv_cactpot_calculator
+# ffxiv_mini-cactpot_calculator
 This is a calculator for mini cactpot game inside Final Fantasy 14.
+[Try the FFXIV Mini-Cackpot Calculator.](https://luftmanpeach.github.io/ffxiv_cactpot_calculator/)
 
 # Inspired by 
 - https://super-aardvark.github.io/yuryu/
@@ -8,11 +9,13 @@ This is a calculator for mini cactpot game inside Final Fantasy 14.
 # To-do
 * Rebuild yuryu's version
   * Calculation Expectation
-  * Customizable payout
   * Color prompt
+  * Viewable options
 * Add more from that
 
 # Version Log
-- 0.1.1 - Add table, selection, sum calculation
+- 0.1.3 - Add reward table, reward multiplier
+- 0.1.2 - Add buttons
+- 0.1.1 - Add scratch form, selection, sum calculation
 - 0.1.0 - Initial html with stylesheet ready
 - 0.0.1 - Build calculation demo (with Java)
