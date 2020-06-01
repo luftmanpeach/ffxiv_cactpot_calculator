@@ -149,7 +149,7 @@ function onRefresh() {
   // expectations
   for (var i = 0; i < 8; i++) {
     var ex = get("Expect" + i);
-    ex.value = "";
+    ex.innerHTML = "";
   }
 
   // selections
