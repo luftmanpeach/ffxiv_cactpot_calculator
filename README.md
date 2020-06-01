@@ -7,14 +7,14 @@ This is a calculator for mini cactpot game inside Final Fantasy 14.
 - https://jerry323.gitee.io/xdwc/
 
 # To-do
-* Rebuild yuryu's version
-  * Calculation Expectation
-  * Color prompt
-  * Viewable options
-* Add more from that
+* HTML-style
+* Color
+* Viewable options
+* Documentation
 
 # Version Log
-- 0.1.3 - Add reward table, reward multiplier
+- 1.0.0 - Complete basic functions with minimal-usable UI
+- 0.1.3 - Add reward table, reward multiplier 
 - 0.1.2 - Add buttons
 - 0.1.1 - Add scratch form, selection, sum calculation
 - 0.1.0 - Initial html with stylesheet ready
