@@ -15,7 +15,7 @@ function makeForm() {
   var row = table.insertRow(-1);
   for (var i = 3; i < 8; i++) {
     var el = row.insertCell(-1);
-    var s = '<div id=Expect' + i + ' >&nbsp;</div>';
+    var s = '<div id=Expect' + i + ' ></div>';
     el.innerHTML = s;
   }
 
@@ -23,7 +23,7 @@ function makeForm() {
   for (var i = 0; i < 3; i++) {
     var row = table.insertRow(-1);
     var el = row.insertCell(-1);
-    var s = '<div id=Expect' + i + ' >&nbsp;</div>';
+    var s = '<div id=Expect' + i + ' ></div>';
     el.innerHTML = s;
     for (var j = 0; j < 3; j++) {
       var el = row.insertCell(-1);
