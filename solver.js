@@ -36,7 +36,7 @@ function makeForm() {
   // multiple
   var table = get("payoutForm");
   var multiple = table.insertRow(-1);
-  multiple.innerHTML = "<tr><th>multiple</th><th><input id=Payout888 value=1.0 /></th></tr>";
+  multiple.innerHTML = '<tr><th>multiple</th><th><input id=Payout888 value=1.0 oninput="onUpdate();"/></th></tr>';
 
   // normal payout
   var header = table.insertRow(-1);
@@ -46,13 +46,13 @@ function makeForm() {
     var el = row.insertCell(-1);
     el.innerHTML = i;
     var el = row.insertCell(-1);
-    var s = '<input id=Payout' + i + ' value=' + payout[i] + ' />';
+    var s = '<input id=Payout' + i + ' value=' + payout[i] + ' oninput="onUpdate();"/>';
     el.innerHTML = s;
     var j = i + 10;
     var el = row.insertCell(-1);
     el.innerHTML = j;
     var el = row.insertCell(-1);
-    var s = '<input id=Payout' + j + ' value=' + payout[j] + ' />';
+    var s = '<input id=Payout' + j + ' value=' + payout[j] + ' oninput="onUpdate();"/>';
     el.innerHTML = s;
   }
   // payout form extra row
@@ -128,7 +128,8 @@ function calculate(a, b, c) {
 
 	var expectation = 0;
 	for (var i=0; i<allSums.length; i++){
-		var worth = parseInt(get("Payout"+allSums[i]).value);
+    var multiplier = parseFloat(get("Payout888").value);
+		var worth = parseInt(get("Payout"+allSums[i]).value)*multiplier;
 		expectation += (worth/allSums.length);
 	}
 	return expectation.toFixed(0);
